@@ -1,0 +1,148 @@
+.super-games {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  display: flex;
+
+  @include vp-1199 {
+    padding-top: 103px;
+    padding-bottom: 100px;
+    justify-content: center;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+    padding-bottom: 68px;
+    flex-direction: column;
+  }
+}
+
+.super-games__description {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-light-red;
+  padding: 84px 78px;
+  color: $color-default-white;
+  width: 500px;
+
+  @include vp-1199 {
+    width: 292px;
+    padding: 49px 45px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 51px 44px;
+    align-items: center;
+  }
+}
+
+.super-games__title {
+  display: flex;
+}
+
+.super-games__title h2 {
+  font-family: $ff-bebas;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0.03em;
+  padding: 0;
+  margin: 0 50px 0 0;
+
+  @include vp-1199 {
+    font-size: 52px;
+    line-height: 52px;
+    margin-right: 15px;
+  }
+}
+
+.super-games__title dl {
+  margin: -3px 0 0;
+  padding: 0;
+}
+
+
+.super-games__title dt {
+  padding: 0 0 4px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+  border-bottom: 1px solid $color-default-white;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+    padding-bottom: 3px;
+  }
+}
+
+.super-games__title dd {
+  padding: 0;
+  margin: 0 0 13px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  display: flex;
+
+  @include vp-1199 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 6px;
+  }
+}
+
+.super-games__title-data {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin-left: 7px;
+
+  @include vp-1199 {
+    font-size: 10px;
+    line-height: 12px;
+    margin-left: 3px;
+  }
+}
+
+.super-games__description p {
+  padding: 0;
+  margin: 0 0 46px;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 30px;
+  }
+}
+
+.super-games__image {
+  width: 660px;
+  height: 500px;
+
+  @include vp-1199 {
+    width: 386px;
+    height: 292px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 292px;
+  }
+}
+
+.super-games__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.super-games__button {
+  width: 100%;
+  padding: 25px;
+
+  @include vp-767 {
+    max-width: 350px;
+  }
+}

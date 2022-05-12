@@ -1,0 +1,214 @@
+.trainers {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 118px;
+
+  @include vp-1199 {
+    padding-bottom: 99px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 70px;
+  }
+}
+
+.trainers h2 {
+  margin: 0 0 52px;
+  font-family: $ff-bebas;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  align-self: start;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 39px;
+    align-self: center;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 44px;
+  }
+}
+
+.trainers__slider {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  width: 1160px;
+  overflow: hidden;
+
+  @include vp-1199 {
+    width: 566px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+  }
+}
+
+.trainers__list {
+  position: relative;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.trainers__item {
+  position: relative;
+  width: 260px;
+  height: 294px;
+  margin-right: 40px;
+  overflow: hidden;
+
+  @include vp-1199 {
+    width: 268px;
+    margin-right: 32px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+    height: 274px;
+  }
+
+  &:hover .trainers__card {
+    z-index: 10;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+}
+
+.trainers__item h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 9px;
+  color: $color-default-white;
+  letter-spacing: 0.05em;
+}
+
+.trainers__image {
+  width: 260px;
+  height: 294px;
+
+  @include vp-1199 {
+    width: 268px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+    height: 274px;
+  }
+}
+
+.trainers__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trainers__card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: $color-default-white;
+  background-color: $color-dark-gray;
+  padding: 52px 40px 58px 55px;
+  z-index: -1;
+
+  @include vp-1199 {
+    padding: 55px;
+  }
+
+  @include vp-767 {
+    padding: 43px 36px;
+  }
+}
+
+.trainers__card h4 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.trainers__card p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0 0 35px -10px;
+  color: $color-gray-blue;
+}
+
+.trainers__card ul {
+  list-style: disc;
+  padding: 0 0 0 10px;
+}
+
+.trainers__card li {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.trainers__button {
+  position: absolute;
+  top: 210px;
+
+  @include vp-1199 {
+    top: 195px;
+  }
+
+  @include vp-767 {
+    top: 185px;
+  }
+
+  &--prev {
+    left: -20px;
+
+    @include vp-1199 {
+      left: 25px;
+    }
+
+    @include vp-767 {
+      left: -5px;
+    }
+  }
+
+  &--next {
+    right: -4px;
+
+    @include vp-1199 {
+      right: 45px;
+    }
+
+    @include vp-767 {
+      right: 5px;
+    }
+  }
+}
+
+.trainers__button svg {
+  width: 18px;
+  height: 34px;
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+  }
+}

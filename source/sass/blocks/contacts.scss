@@ -1,0 +1,136 @@
+.contacts {
+  background: linear-gradient(to right, $color-default-black 50%, $color-default-white 50%);
+  border-top: 1px solid $color-light-blue;
+
+  @include vp-1199 {
+    background: none;
+  }
+}
+
+.contacts__intro {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.contacts h2 {
+  font-family: $ff-bebas;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 64px;
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
+  margin: 0 0 28px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 29px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.contacts__form {
+  width: 50%;
+  padding: 60px 70px 50px 0;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    width: 100%;
+    background-color: $color-default-black;
+    padding: 68px 133px;
+  }
+
+  @include vp-767 {
+    padding: 68px 15px;
+  }
+}
+
+.contacts__details {
+  width: 50%;
+  padding: 60px 0 50px 120px;
+
+  @include vp-1199 {
+    width: 100%;
+    padding: 68px 133px 48px;
+  }
+
+  @include vp-767 {
+    padding: 67px 15px 53px;
+  }
+}
+
+.contacts__content {
+  display: flex;
+  margin: -9px -55px 0;
+
+  @include vp-1199 {
+    margin: -9px -45px 0;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    margin: -10px 0 0;
+  }
+}
+
+.contacts__content dl {
+  padding: 0 60px;
+  border-right: 1px solid $color-light-blue;
+
+  @include vp-1199 {
+    padding: 0 50px 0 45px;
+  }
+
+  @include vp-767 {
+    border: none;
+    padding: 0;
+    margin-bottom: 7px;
+  }
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.contacts__content dt {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 3px;
+  padding: 0;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 6px;
+  }
+}
+
+.contacts__content dd {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0 0 17px;
+  padding: 0;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  &:last-child {
+    margin-bottom: 2px;
+  }
+}
