@@ -1070,15 +1070,15 @@ button,
 }
 
 .header {
-  position: relative;
-}
-
-.header__logo {
-  position: absolute;
-  top: 31px;
-  left: 20px;
-  width: 89px;
-  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 31px;
+  margin-bottom: -58px;
+  z-index: 5;
 }
 
 .header__phone {
@@ -1087,9 +1087,7 @@ button,
   font-size: 26px;
   line-height: 26px;
   letter-spacing: 0.03em;
-  position: absolute;
-  top: 29px;
-  right: 22px;
+  margin-top: -3px;
 }
 
 .header__phone:hover {
@@ -1200,6 +1198,7 @@ button,
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
+  width: 115px;
 }
 
 .promo__button {
@@ -1525,20 +1524,8 @@ button,
   text-transform: uppercase;
 }
 
-.social__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .social__item--promo {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .social__item--footer {
@@ -2184,14 +2171,12 @@ button,
     height: 73px;
   }
 
-  .header__logo {
-    top: 40px;
-    left: 45px;
+  .header {
+    margin-bottom: -63px;
+    padding-top: 40px;
   }
 
   .header__phone {
-    top: 38px;
-    right: 46px;
     font-size: 24px;
     line-height: 24px;
     letter-spacing: 0.02em;
@@ -2647,14 +2632,12 @@ button,
     object-position: center;
   }
 
-  .header__logo {
-    top: 20px;
-    left: 15px;
+  .header {
+    margin-bottom: -44px;
+    padding-top: 23px;
   }
 
   .header__phone {
-    top: 20px;
-    right: 15px;
     font-size: 20px;
     line-height: 20px;
   }
