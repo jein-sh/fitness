@@ -7,23 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Фитнес">
   <title>Fitness</title>
-  <script src="https://www.youtube.com/iframe_api"></script>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <div class="wrapper">
     <header class="header container">
-      <div class="header__logo">
-        <a class="logo">
-          <svg width="87" height="20">
-            <use xlink:href="img/sprite/sprite.svg#logo"></use>
-          </svg>
-        </a>
-      </div>
-      <div class="header__phone">
-        <a href="tel:+88005555555">8-800-555-55-55</a>
-      </div>
+      <a class="header__logo logo">
+        <svg width="87" height="20">
+          <use xlink:href="img/sprite/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <a class="header__phone" href="tel:+88005555555">8-800-555-55-55</a>
     </header>
     <main>
       <section class="promo">
@@ -31,7 +26,7 @@
           <div class="promo__description">
             <span>Омск</span>
             <div class="promo__title">
-              <h1>Фитнес<br> центр</h1>
+              <h1>Фитнес центр</h1>
               <p>Тренажёрный зал<br>
                 Групповые занятия<br>
                 Кардио-зона</p>
@@ -72,19 +67,18 @@
           <!-- 1x: 660px x 401px, 2x: 1320px x 802px -->
           <picture>
             <source type="image/webp" srcset="img/gym.webp 1x, img/gym@2x.webp 2x">
-            <img src="img/gym.jpg" srcset="img/gym@2x.jpg 2x"width="660" height="401" alt="Тренажерный зал">
+            <img src="img/gym.jpg" srcset="img/gym@2x.jpg 2x" width="660" height="401" alt="Тренажерный зал">
           </picture>
         </div>
         <div class="gym__video">
-          <iframe width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <button class="gym__play" type="button" aria-label="Показать видео">
+            <span class="visually-hidden">Воспроизвести</span>
+          </button>
           <!-- 1x: 364px x 228px, 2x: 728px x 456px -->
           <picture>
             <source type="image/webp" srcset="img/video.webp 1x, img/video@2x.webp 2x">
             <img class="gym__video-img" src="img/video.jpg" srcset="img/video@2x.jpg 2x" width="364" height="228" alt="Тренажерный зал">
           </picture>
-          <button class="gym__play" type="button" aria-label="Показать видео">
-            <span class="visually-hidden">Воспроизвести</span>
-          </button>
         </div>
       </section>
       <section class="subscriptions" id="subscriptions">
@@ -541,15 +535,16 @@
     </main>
     <footer class="footer">
       <div class="footer__intro container">
+        <div class="footer__logo">
+          <a class="logo">
+            <svg width="87" height="20">
+              <use xlink:href="img/sprite/sprite.svg#logo"></use>
+            </svg>
+          </a>
+        </div>
         <nav class="footer__nav nav">
           <ul class="nav__list">
-            <li class="nav__item nav__item--logo">
-              <a class="logo">
-                <svg width="87" height="20">
-                  <use xlink:href="img/sprite/sprite.svg#logo"></use>
-                </svg>
-              </a>
-            </li>
+
             <li class="nav__item">
               <a href="#">Услуги</a>
             </li>

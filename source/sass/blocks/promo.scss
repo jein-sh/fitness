@@ -68,14 +68,17 @@
   text-transform: uppercase;
   margin: 10px 0 58px;
   padding: 0;
+  width: 298px;
 
   @include vp-1199 {
+    width: 235px;
     font-size: 86px;
     line-height: 86px;
     margin: 2px 0 39px;
   }
 
   @include vp-767 {
+    width: 213px;
     font-size: 78px;
     line-height: 78px;
     margin: 7px 0 45px;

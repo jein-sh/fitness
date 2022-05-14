@@ -116,6 +116,7 @@
   transform: translateX(-143px);
   width: 364px;
   height: 228px;
+  background-color: $color-default-black;
 
   @include vp-1199 {
     bottom: 100px;
@@ -163,6 +164,7 @@
   height: 100px;
   margin: 0;
   padding: 0;
+  z-index: 5;
 
   border: none;
   background-color: transparent;

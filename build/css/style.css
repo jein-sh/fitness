@@ -891,6 +891,11 @@ button,
   align-items: center;
 }
 
+.footer__logo {
+  justify-self: flex-start;
+  margin-right: 278px;
+}
+
 .footer__nav {
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -1017,6 +1022,7 @@ button,
   transform: translateX(-143px);
   width: 364px;
   height: 228px;
+  background-color: #102654;
 }
 
 .gym__video iframe {
@@ -1045,6 +1051,7 @@ button,
   height: 100px;
   margin: 0;
   padding: 0;
+  z-index: 5;
   border: none;
   background-color: transparent;
   background-image: url("../img/svg/play.svg");
@@ -1075,20 +1082,17 @@ button,
 }
 
 .header__phone {
-  position: absolute;
-  top: 29px;
-  right: 22px;
-}
-
-.header__phone a {
   font-family: "Bebas Neue", "Arial", sans-serif;
   color: #ffffff;
   font-size: 26px;
   line-height: 26px;
   letter-spacing: 0.03em;
+  position: absolute;
+  top: 29px;
+  right: 22px;
 }
 
-.header__phone a:hover {
+.header__phone:hover {
   opacity: 0.5;
 }
 
@@ -1124,11 +1128,6 @@ button,
 
 .nav__item a:hover {
   opacity: 0.5;
-}
-
-.nav__item .logo {
-  justify-self: flex-start;
-  margin-right: 236px;
 }
 
 .promo {
@@ -1188,6 +1187,7 @@ button,
   text-transform: uppercase;
   margin: 10px 0 58px;
   padding: 0;
+  width: 298px;
 }
 
 .promo__title p {
@@ -1893,10 +1893,12 @@ button,
 .trainers__item:hover .trainers__card {
   z-index: 10;
   overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .trainers__item:hover .trainers__card::-webkit-scrollbar {
-  width: 0;
+  display: none;
 }
 
 .trainers__item h3 {
@@ -2117,7 +2119,11 @@ button,
   }
 
   .footer {
-    min-height: 120px;
+    min-height: 112px;
+  }
+
+  .footer__logo {
+    margin-right: 64px;
   }
 
   .form {
@@ -2186,9 +2192,6 @@ button,
   .header__phone {
     top: 38px;
     right: 46px;
-  }
-
-  .header__phone a {
     font-size: 24px;
     line-height: 24px;
     letter-spacing: 0.02em;
@@ -2201,10 +2204,6 @@ button,
 
   .nav__item {
     margin-right: 30px;
-  }
-
-  .nav__item .logo {
-    margin-right: 32px;
   }
 
   .promo {
@@ -2222,6 +2221,7 @@ button,
   }
 
   .promo__title h1 {
+    width: 235px;
     font-size: 86px;
     line-height: 86px;
     margin: 2px 0 39px;
@@ -2562,7 +2562,11 @@ button,
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    margin: 37px 0 55px;
+    margin: 51px 0 55px;
+  }
+
+  .footer__logo {
+    margin: 0 0 -32px;
   }
 
   .footer__social {
@@ -2651,9 +2655,6 @@ button,
   .header__phone {
     top: 20px;
     right: 15px;
-  }
-
-  .header__phone a {
     font-size: 20px;
     line-height: 20px;
   }
@@ -2679,14 +2680,14 @@ button,
     flex-direction: column;
   }
 
+  .nav__item:first-child {
+    margin-top: 48px;
+  }
+
   .nav__item a {
     font-size: 16px;
     line-height: 19px;
     margin-bottom: 30px;
-  }
-
-  .nav__item .logo {
-    margin: -2px 0 28px;
   }
 
   .promo {
@@ -2704,6 +2705,7 @@ button,
   }
 
   .promo__title h1 {
+    width: 213px;
     font-size: 78px;
     line-height: 78px;
     margin: 7px 0 45px;

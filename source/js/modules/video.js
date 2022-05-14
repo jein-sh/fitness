@@ -1,13 +1,18 @@
 let gym = document.querySelector('.gym');
+let video = gym.querySelector('.gym__video');
 let buttonPlay = gym.querySelector('.gym__play');
 let videoImage = gym.querySelector('.gym__video-img');
 
-function onPlayerReady(event) {
-  buttonPlay.addEventListener('click', function () {
-    buttonPlay.classList.add('gym__play--hidden');
-    videoImage.classList.add('gym__video-img--hidden');
-    event.target.playVideo();
-  });
-}
+const addVideo = () => {
+  const iframe = document.createElement('iframe');
+  iframe.src = 'https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1&enable_js=1';
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+  iframe.allowFullscreen = '';
+  video.appendChild(iframe);
+};
 
-onPlayerReady();
+buttonPlay.addEventListener('click', () => {
+  buttonPlay.classList.add('gym__play--hidden');
+  videoImage.classList.add('gym__video-img--hidden');
+  addVideo();
+});
