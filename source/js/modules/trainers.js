@@ -12,21 +12,21 @@ let sliderCount;
 
 const removeClassActive = () => {
   trainers.forEach((el) => {
-    if(el.classList.contains('trainers__item--active')) {
+    if (el.classList.contains('trainers__item--active')) {
       el.classList.remove('trainers__item--active');
     }
   });
-}
+};
 
 const addClassActive = () => {
   trainers = trainersContainer.querySelectorAll('.trainers__item');
-  for( let i=0; i < sliderCount; i++ ) {
+  for (let i = 0; i < sliderCount; i++) {
     trainers[i].classList.add('trainers__item--active');
-  };
+  }
 };
 
 const breakpointChecker = () => {
-  removeClassActive()
+  removeClassActive();
   if (breakpointTablet.matches) {
     sliderCount = 1;
   } else if (breakpointDesktop.matches) {
@@ -45,7 +45,7 @@ const showPrevTrainer = () => {
   trainersList.insertBefore(lastTrainer.cloneNode(true), firstTrainer);
   lastTrainer.remove();
   addClassActive();
-}
+};
 
 const showNextTrainer = () => {
   let firstTrainer = trainersList.firstElementChild;
@@ -54,12 +54,17 @@ const showNextTrainer = () => {
   trainersList.appendChild(firstTrainer.cloneNode(true));
   firstTrainer.remove();
   addClassActive();
-}
+};
 
 const handleGesture = () => {
-  if (touchendX < touchstartX) showPrevTrainer
-  if (touchendX > touchstartX) showNextTrainer
-}
+  if (touchendX < touchstartX) {
+    showPrevTrainer();
+  }
+
+  if (touchendX > touchstartX) {
+    showNextTrainer();
+  }
+};
 
 breakpointTablet.addListener(breakpointChecker);
 breakpointDesktop.addListener(breakpointChecker);
@@ -68,11 +73,11 @@ breakpointChecker();
 buttonNext.addEventListener('click', showNextTrainer);
 buttonPrev.addEventListener('click', showPrevTrainer);
 
-slider.addEventListener('touchstart', e => {
-  touchstartX = e.changedTouches[0].screenX
-})
+slider.addEventListener('touchstart', (e) => {
+  touchstartX = e.changedTouches[0].screenX;
+});
 
-slider.addEventListener('touchend', e => {
-  touchendX = e.changedTouches[0].screenX
-  handleGesture()
-})
+slider.addEventListener('touchend', (e) => {
+  touchendX = e.changedTouches[0].screenX;
+  handleGesture();
+});

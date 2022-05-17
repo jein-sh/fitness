@@ -11,7 +11,7 @@ const showNextReview = () => {
     activeEl.classList.remove('reviews__item--active');
     nextEl.classList.add('reviews__item--active');
   }
-}
+};
 
 const showPrevReview = () => {
   let activeEl = reviewsContainer.querySelector('.reviews__item--active');
@@ -21,24 +21,29 @@ const showPrevReview = () => {
     activeEl.classList.remove('reviews__item--active');
     prevEl.classList.add('reviews__item--active');
   }
-}
+};
 
 buttonNext.addEventListener('click', showNextReview);
 buttonPrev.addEventListener('click', showPrevReview);
 
-let touchstartX = 0
-let touchendX = 0
+let touchstartX = 0;
+let touchendX = 0;
 
 const handleGesture = () => {
-  if (touchendX < touchstartX) showPrevReview
-  if (touchendX > touchstartX) showNextReview
-}
+  if (touchendX < touchstartX) {
+    showPrevReview();
+  }
 
-reviewsList.addEventListener('touchstart', e => {
-  touchstartX = e.changedTouches[0].screenX
-})
+  if (touchendX > touchstartX) {
+    showNextReview();
+  }
+};
 
-reviewsList.addEventListener('touchend', e => {
-  touchendX = e.changedTouches[0].screenX
-  handleGesture()
-})
+reviewsList.addEventListener('touchstart', (e) => {
+  touchstartX = e.changedTouches[0].screenX;
+});
+
+reviewsList.addEventListener('touchend', (e) => {
+  touchendX = e.changedTouches[0].screenX;
+  handleGesture();
+});
