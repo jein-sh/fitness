@@ -58,11 +58,11 @@ const showNextTrainer = () => {
 
 const handleGesture = () => {
   if (touchendX < touchstartX) {
-    showPrevTrainer();
+    showNextTrainer();
   }
 
   if (touchendX > touchstartX) {
-    showNextTrainer();
+    showPrevTrainer();
   }
 };
 

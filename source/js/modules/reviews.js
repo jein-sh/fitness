@@ -31,11 +31,11 @@ let touchendX = 0;
 
 const handleGesture = () => {
   if (touchendX < touchstartX) {
-    showPrevReview();
+    showNextReview();
   }
 
   if (touchendX > touchstartX) {
-    showNextReview();
+    showPrevReview();
   }
 };
 
