@@ -3,10 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 118px;
+  max-width: 1316px;
+  padding: 0 58px 120px;
 
   @include vp-1199 {
-    padding-bottom: 99px;
+    padding: 0 45px 99px;
   }
 
   @include vp-767 {
@@ -15,7 +16,7 @@
 }
 
 .trainers h2 {
-  margin: 0 0 52px;
+  margin: 0 0 52px 21px;
   font-family: $ff-bebas;
   font-weight: 700;
   font-size: 49px;
@@ -26,7 +27,7 @@
   @include vp-1199 {
     font-size: 42px;
     line-height: 42px;
-    margin-bottom: 39px;
+    margin: 0 0 39px;
     align-self: center;
   }
 
@@ -38,44 +39,42 @@
 }
 
 .trainers__slider {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  width: 1160px;
-  overflow: hidden;
-
-  @include vp-1199 {
-    width: 566px;
-  }
+  position: relative;
 
   @include vp-767 {
-    width: 226px;
+    width: 78%;
   }
 }
 
 .trainers__list {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.trainers__item {
-  position: relative;
-  width: 260px;
-  height: 294px;
-  margin-right: 40px;
-  overflow: hidden;
 
   @include vp-1199 {
-    width: 268px;
-    margin-right: 32px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
 
   @include vp-767 {
-    width: 226px;
-    height: 274px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.trainers__item {
+  display: none;
+
+  position: relative;
+  width: 100%;
+
+  overflow: hidden;
+
+  &--active {
+    display: flex;
   }
 
   &:hover .trainers__card {
@@ -88,6 +87,15 @@
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+}
+
+.trainers__intro {
+
+  @include vp-767 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 121%;
   }
 }
 
@@ -109,8 +117,9 @@
   }
 
   @include vp-767 {
-    width: 226px;
-    height: 274px;
+    position: absolute;
+    width:100%;
+    height: 100%;
   }
 }
 
@@ -171,37 +180,33 @@
 
 .trainers__button {
   position: absolute;
-  top: 210px;
-
-  @include vp-1199 {
-    top: 195px;
-  }
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 34px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 
   @include vp-767 {
-    top: 185px;
+    width: 10px;
+    height: 19px;
   }
 
   &--prev {
-    left: -20px;
-
-    @include vp-1199 {
-      left: 25px;
-    }
+    left: -55px;
 
     @include vp-767 {
-      left: -5px;
+      left: -32px;
     }
   }
 
   &--next {
-    right: -4px;
-
-    @include vp-1199 {
-      right: 45px;
-    }
+    right: -55px;
 
     @include vp-767 {
-      right: 5px;
+      right: -32px;
     }
   }
 }

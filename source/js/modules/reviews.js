@@ -2,18 +2,43 @@ let reviewsContainer = document.querySelector('.reviews');
 let buttonPrev = reviewsContainer.querySelector('.reviews__button--prev');
 let buttonNext = reviewsContainer.querySelector('.reviews__button--next');
 let reviewsList = reviewsContainer.querySelector('.reviews__list');
-let reviews = reviewsContainer.querySelectorAll('.reviews__item');
-let step = reviews[0].offsetWidth;
-let position = 0;
 
-buttonNext.addEventListener('click', function () {
-  position -= step;
-  position = Math.max(position, -2 * step);
-  reviewsList.style.marginLeft = position + 'px';
-});
+const showNextReview = () => {
+  let activeEl = reviewsContainer.querySelector('.reviews__item--active');
+  let nextEl = activeEl.nextElementSibling;
 
-buttonPrev.addEventListener('click', function () {
-  position += step;
-  position = Math.min(position, 0);
-  reviewsList.style.marginLeft = position + 'px';
-});
+  if (nextEl) {
+    activeEl.classList.remove('reviews__item--active');
+    nextEl.classList.add('reviews__item--active');
+  }
+}
+
+const showPrevReview = () => {
+  let activeEl = reviewsContainer.querySelector('.reviews__item--active');
+  let prevEl = activeEl.previousElementSibling;
+
+  if (prevEl) {
+    activeEl.classList.remove('reviews__item--active');
+    prevEl.classList.add('reviews__item--active');
+  }
+}
+
+buttonNext.addEventListener('click', showNextReview);
+buttonPrev.addEventListener('click', showPrevReview);
+
+let touchstartX = 0
+let touchendX = 0
+
+const handleGesture = () => {
+  if (touchendX < touchstartX) showPrevReview
+  if (touchendX > touchstartX) showNextReview
+}
+
+reviewsList.addEventListener('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX
+})
+
+reviewsList.addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenX
+  handleGesture()
+})

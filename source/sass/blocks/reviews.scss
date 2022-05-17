@@ -40,15 +40,9 @@
   justify-content: center;
   align-items: center;
   justify-self: center;
-}
-
-.reviews__carusel {
-  display: flex;
-  width: 560px;
-  overflow: hidden;
 
   @include vp-767 {
-    width: 226px;
+    width: 77%;
   }
 }
 
@@ -61,7 +55,7 @@
 }
 
 .reviews__item {
-  display: flex;
+  display: none;
   align-self: flex-start;
   position: relative;
   width: 560px;
@@ -69,8 +63,16 @@
   color: $color-default-white;
   padding: 54px 62px 58px;
 
+  &--active {
+    display: flex;
+  }
+
+  @include vp-1199 {
+    width: 566px;
+  }
+
   @include vp-767 {
-    width: 226px;
+    width: 100%;
     padding: 33px 20px 36px;
   }
 }
@@ -111,7 +113,6 @@
   font-weight: 700;
   margin: 0 0 13px;
 
-
   @include vp-767 {
     line-height: 26px;
     min-height: 70px;
@@ -133,39 +134,33 @@
 
 .reviews__button {
   position: absolute;
-  top: 83px;
-  width: 16px;
-  height: 32px;
-
-  @include vp-1199 {
-    top: 83px;
-  }
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 34px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 
   @include vp-767 {
-    top: 140px;
+    width: 10px;
+    height: 19px;
   }
 
   &--prev {
-    left: -74px;
-
-    @include vp-1199 {
-      left: -74px;
-    }
+    left: -54px;
 
     @include vp-767 {
-      left: -52px;
+      left: -32px;
     }
   }
 
   &--next {
-    right: -60px;
-
-    @include vp-1199 {
-      right: -60px;
-    }
+    right: -54px;
 
     @include vp-767 {
-      right: -42px;
+      right: -32px;
     }
   }
 }

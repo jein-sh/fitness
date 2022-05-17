@@ -6,7 +6,8 @@
   }
 
   @include vp-767 {
-    width: 290px;
+    width: 100%;
+    min-width: 290px;
   }
 }
 
@@ -16,7 +17,7 @@
   border: none;
 
   @include vp-767 {
-    margin: 10px;
+    margin: 10px 0;
   }
 }
 

@@ -142,6 +142,13 @@ const optimizeImages = () => {
       .pipe(gulp.dest('build/img'));
 };
 
+const ghPages = require('gh-pages');
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
+
 exports.imagemin = optimizeImages;
 exports.webp = createWebp;
 exports.start = start;

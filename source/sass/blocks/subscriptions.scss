@@ -25,7 +25,7 @@
     right: -80px;
     width: 287px;
     height: 494px;
-    background-image: url("../../img/weights.png");
+    background-image: url("../img/weights.png");
     background-position: 0 0;
     background-repeat: no-repeat;
     z-index: 5;
@@ -108,6 +108,8 @@
 }
 
 .subscriptions__list {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -115,11 +117,16 @@
   z-index: 10;
 
   @include vp-1199 {
+    grid-template-columns: 1fr;
     flex-direction: column;
   }
 
+  @include vp-767 {
+    gap: 35px;
+  }
+
   &--active {
-    display: flex;
+    display: grid;
   }
 }
 
@@ -133,11 +140,9 @@
   padding: 53px 70px 62px;
   background-color: $color-default-white;
   border: 7px solid transparent;
-  margin-right: 40px;
 
   @include vp-1199 {
     flex-direction: column;
-    margin: 0 0 40px;
     width: 442px;
     padding: 59px 111px 56px;
   }
@@ -146,11 +151,6 @@
     height: 384px;
     width: 290px;
     padding: 39px 33px 52px;
-    margin-bottom: 35px;
-  }
-
-  &:last-child {
-    margin: 0;
   }
 
   &:hover {
