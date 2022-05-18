@@ -546,6 +546,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .wrapper .header,
@@ -1585,9 +1586,9 @@ button,
 .subscriptions__intro::after {
   content: "";
   position: absolute;
-  bottom: -260px;
-  right: -80px;
-  width: 287px;
+  bottom: -269px;
+  right: -265px;
+  width: 470px;
   height: 494px;
   background-image: url("../img/weights.png");
   background-position: 0 0;
@@ -2306,8 +2307,11 @@ button,
   }
 
   .subscriptions__intro::after {
-    width: 347px;
-    right: 0;
+    bottom: -253px;
+    right: -100px;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
   }
 
   .subscriptions h2 {
