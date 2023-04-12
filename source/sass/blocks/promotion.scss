@@ -187,13 +187,14 @@
   text-decoration: underline;
   text-underline-offset: 2px;
   color: $color-dark-blue;
+  transition: transform 0.5s ease;
 
   @include vp-767 {
     align-self: center;
   }
 
   &:hover {
-    opacity: 0.5;
+    transform: scale(1.1);
   }
 
   &--main {

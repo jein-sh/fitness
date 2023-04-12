@@ -104,9 +104,10 @@
 
 .promo__button {
   width: 230px;
+  transition: transform 0.5s ease;
 
   &:hover {
-    opacity: 0.5;
+    transform: scale(1.1);
   }
 
   @include vp-1199 {

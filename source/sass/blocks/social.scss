@@ -18,6 +18,8 @@
 }
 
 .social__item {
+  transition: transform 0.5s ease;
+
   &--promo {
     margin-top: 10px;
   }
@@ -69,6 +71,6 @@
   }
 
   &:hover {
-    opacity: 0.5;
+    transform: scale(1.1);
   }
 }

@@ -599,24 +599,57 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  cursor: pointer;
 }
 
 .button:hover {
-  opacity: 0.7;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .button--white {
+  position: relative;
   padding: 24px;
   border: 2px solid #102654;
   color: #102654;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.button--white span {
+  position: relative;
+  z-index: 10;
+}
+
+.button--white::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  z-index: 5;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .button--white:hover {
-  padding: 26px;
-  border: none;
   color: #ffffff;
-  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
-  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+}
+
+.button--white:hover::after {
+  opacity: 1;
 }
 
 .button--big {
@@ -695,6 +728,22 @@ button,
 
 .contacts__content dd:last-child {
   margin-bottom: 2px;
+}
+
+.contacts a {
+  display: block;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  cursor: pointer;
+}
+
+.contacts a:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .features {
@@ -1024,8 +1073,10 @@ button,
 }
 
 .gym__video iframe {
+  position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 20;
 }
 
 .gym__video-img {
@@ -1042,9 +1093,9 @@ button,
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
   margin: 0;
@@ -1053,14 +1104,21 @@ button,
   border: none;
   background-color: transparent;
   background-image: url("../img/svg/play.svg");
-  background-position: 0 0;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  cursor: pointer;
 }
 
 .gym__play:hover {
-  width: 120px;
-  height: 120px;
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+  -ms-transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 .gym__play--hidden {
@@ -1086,10 +1144,17 @@ button,
   line-height: 26px;
   letter-spacing: 0.03em;
   margin-top: -3px;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .header__phone:hover {
-  opacity: 0.5;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .logo svg {
@@ -1110,6 +1175,17 @@ button,
 
 .nav__item {
   margin: 10px 40px 10px 0;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.nav__item:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .nav__item:last-child {
@@ -1120,10 +1196,6 @@ button,
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
-}
-
-.nav__item a:hover {
-  opacity: 0.5;
 }
 
 .promo {
@@ -1201,10 +1273,17 @@ button,
 
 .promo__button {
   width: 230px;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .promo__button:hover {
-  opacity: 0.5;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .promo__image {
@@ -1494,10 +1573,17 @@ button,
   text-decoration: underline;
   text-underline-offset: 2px;
   color: #1c3374;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .promotion__link:hover {
-  opacity: 0.5;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .promotion__link--main {
@@ -1532,6 +1618,14 @@ button,
   text-transform: uppercase;
 }
 
+.social__item {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
 .social__item--promo {
   margin-top: 10px;
 }
@@ -1560,7 +1654,9 @@ button,
 }
 
 .social__item:hover {
-  opacity: 0.5;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .subscriptions {
@@ -1619,6 +1715,7 @@ button,
 }
 
 .subscriptions__tab {
+  position: relative;
   padding-bottom: 11px;
   margin-right: 35px;
   font-size: 20px;
@@ -1627,10 +1724,37 @@ button,
   background-color: transparent;
   border: none;
   cursor: pointer;
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+.subscriptions__tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: #d10a42;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .subscriptions__tab:hover {
   color: rgba(16, 38, 84, 0.89);
+}
+
+.subscriptions__tab:hover::after {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .subscriptions__tab:last-child {
@@ -1673,13 +1797,33 @@ button,
   height: 448px;
   padding: 53px 70px 62px;
   background-color: #ffffff;
-  border: 7px solid transparent;
+  border: 7px solid #ffffff;
+  -webkit-transition: border-color 0.5s ease;
+  -o-transition: border-color 0.5s ease;
+  transition: border-color 0.5s ease;
 }
 
-.subscriptions__item:hover {
-  -o-border-image: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
-  border-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
-  border-image-slice: 1;
+.subscriptions__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.subscriptions__item:hover::after {
+  -webkit-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  transform: scale(1.07);
 }
 
 .subscriptions__item h3 {
@@ -1883,8 +2027,8 @@ button,
 }
 
 .trainers__item:hover .trainers__card {
-  z-index: 10;
   overflow: scroll;
+  opacity: 1;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -1926,7 +2070,11 @@ button,
   color: #ffffff;
   background-color: rgba(16, 38, 84, 0.89);
   padding: 52px 40px 58px 55px;
-  z-index: -1;
+  opacity: 0;
+  z-index: 10;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .trainers__card h4 {

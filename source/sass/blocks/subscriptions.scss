@@ -73,6 +73,7 @@
 }
 
 .subscriptions__tab {
+  position: relative;
   padding-bottom: 11px;
   margin-right: 35px;
   font-size: 20px;
@@ -81,9 +82,26 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: color 0.5s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: $color-red;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+  }
 
   &:hover {
     color: $color-dark-gray;
+
+    &::after {
+      transform: scaleX(1);
+    }
   }
 
   @include vp-1199 {
@@ -140,7 +158,20 @@
   height: 448px;
   padding: 53px 70px 62px;
   background-color: $color-default-white;
-  border: 7px solid transparent;
+  border: 7px solid $color-default-white;
+  transition: border-color 0.5s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $linear-gradient;
+    z-index: -1;
+    transition: transform 0.5s ease;
+  }
 
   @include vp-1199 {
     flex-direction: column;
@@ -154,9 +185,8 @@
     padding: 39px 33px 52px;
   }
 
-  &:hover {
-    border-image: $linear-gradient;
-    border-image-slice: 1;
+  &:hover::after {
+    transform: scale(1.07);
   }
 }
 

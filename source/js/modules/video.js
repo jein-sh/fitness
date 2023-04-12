@@ -5,9 +5,9 @@ let videoImage = gym.querySelector('.gym__video-img');
 
 const addVideo = () => {
   const iframe = document.createElement('iframe');
-  iframe.src = 'https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1&enable_js=1';
-  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-  iframe.allowFullscreen = '';
+  iframe.src = 'https://www.youtube.com/embed/d84pzFJz6RY?start=45?autoplay=1&enable_js=1';
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  iframe.allowFullscreen = true;
   video.appendChild(iframe);
 };
 
