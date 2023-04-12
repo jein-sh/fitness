@@ -102,9 +102,15 @@
   }
 }
 
-.promo__button {
+.promo__button.button {
   width: 230px;
   transition: transform 0.5s ease;
+
+  span {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
 
   &:hover {
     transform: scale(1.1);
