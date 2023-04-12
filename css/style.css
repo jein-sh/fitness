@@ -1271,7 +1271,7 @@ button,
   width: 115px;
 }
 
-.promo__button {
+.promo__button.button {
   width: 230px;
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
@@ -1280,7 +1280,12 @@ button,
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.promo__button:hover {
+.promo__button.button span {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.promo__button.button:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -2380,7 +2385,7 @@ button,
     margin: 38px -25px 0 0;
   }
 
-  .promo__button {
+  .promo__button.button {
     width: 183px;
   }
 
@@ -2846,7 +2851,7 @@ button,
     margin: 34px -35px 0 0;
   }
 
-  .promo__button {
+  .promo__button.button {
     width: 290px;
     padding-top: 21px;
   }
